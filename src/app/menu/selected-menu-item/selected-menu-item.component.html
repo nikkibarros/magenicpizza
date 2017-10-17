@@ -1,0 +1,10 @@
+<div *ngIf="pizza">
+  <h2>{{pizza.name}} ingredients</h2>
+  <div>
+    <ul>
+      <li *ngFor="let ingredient of pizza.ingredients">
+        <span>{{ingredient}}</span>
+      </li>
+    </ul>
+  </div>
+</div>

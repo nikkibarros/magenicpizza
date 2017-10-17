@@ -1,0 +1,7 @@
+<h2>Pizzas</h2>
+<ul class="pizzas">
+  <li *ngFor="let pizza of pizzas" (click)="onSelect(pizza)">
+    <span class="badge">{{pizza.name}}</span>
+  </li>
+</ul>
+<app-selected-menu-item></app-selected-menu-item>
