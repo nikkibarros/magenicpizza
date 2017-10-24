@@ -1,7 +1,20 @@
-<h2>Pizzas</h2>
+<h2>Menu</h2>
 <ul class="pizzas">
   <li *ngFor="let pizza of pizzas" (click)="onSelect(pizza)">
-    <span class="badge">{{pizza.name}}</span>
+    {{pizza.name}}
   </li>
 </ul>
-<app-selected-menu-item></app-selected-menu-item>
+<div class="allSizes">
+  <div class="size">
+    <input type="radio" name="pizzaSize" [value]="regularPrice" (change)="onSelectedRadioChange(regularPrice)" />
+    <label>Regular (9")</label>
+  </div>
+  <div class="size">
+    <input type="radio" name="pizzaSize" [value]="familyPrice" (change)="onSelectedRadioChange(familyPrice)" />
+    <label>Family (12")</label>
+  </div>
+  <div class="size">
+    <input type="radio" name="pizzaSize" [value]="partyPrice" (change)="onSelectedRadioChange(partyPrice)" />
+    <label>Party (14")</label>
+  </div>
+</div>

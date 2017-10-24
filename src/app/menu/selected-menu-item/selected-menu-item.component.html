@@ -1,10 +1,21 @@
-<div *ngIf="pizza">
-  <h2>{{pizza.name}} ingredients</h2>
-  <div>
-    <ul>
-      <li *ngFor="let ingredient of pizza.ingredients">
-        <span>{{ingredient}}</span>
-      </li>
-    </ul>
+<div class="selected-pizza" *ngIf="pizza">
+  <div class="pizza-detail">
+    <div class="ingredients-side">
+      <h3>{{pizza.name}}</h3>
+      <div>
+        <ul class="ingredients">
+          <li *ngFor="let ingredient of pizza.ingredients">
+            {{ingredient}}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="img-side">
+      <h3>PHP {{price}}</h3>
+      <img [src]="pizza.img" />
+    </div>
+  </div>
+  <div class="pizza-button">
+    <input type="button" value="Add Pizza" (click)="onClick(pizza)" />
   </div>
 </div>

@@ -1,18 +1,30 @@
+.selected {
+    background-color: #CFD8DC !important;
+    color: white;
+}
 .pizzas {
-    margin: 0 0 2em 0;
+    margin: auto;
     list-style-type: none;
     padding: 0;
-    width: 15em;
+    width: 90%;
+    -moz-column-gap: 20;
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 20;
+    column-count: 3;
+    column-gap: 20;
 }
 .pizzas li {
     cursor: pointer;
     position: relative;
     left: 0;
     background-color: #EEE;
-    margin: .5em;
+    margin: 0 .5em .5em;
     padding: .3em 0;
+    width: 15em;
     height: 1.6em;
     border-radius: 4px;
+    text-align: center;
 }
 .pizzas li.selected:hover {
     background-color: #BBD8DC !important;
@@ -40,4 +52,20 @@
     height: 1.8em;
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
+}
+h2 {
+    text-align: center;
+}
+.allSizes {
+    margin: 1.5em auto;
+    width: 90%;
+    text-align: center;
+}
+.size {
+    display: inline-block;
+}
+.size label {
+    margin-left: -1px;
+    position: relative;
+    left: 1px;
 }

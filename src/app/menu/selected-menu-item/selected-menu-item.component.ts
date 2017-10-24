@@ -12,12 +12,20 @@ export class SelectedMenuItemComponent implements OnInit, OnDestroy {
 
   private destroyed$ = new Subject();
   pizza: Pizza;
+  price: number;
+
+  onClick(pizza: Pizza): void {
+    this.middlemanService.addPizzaToShoppingCart(pizza);
+  }
 
   constructor(private middlemanService: MiddlemanService) { }
 
   ngOnInit() {
     this.middlemanService.selectedPizza$.takeUntil(this.destroyed$).subscribe(
       selectedPizza => this.pizza = selectedPizza
+    );
+    this.middlemanService.selectedSize$.takeUntil(this.destroyed$).subscribe(
+      selectedSize => this.price = selectedSize
     );
   }
 

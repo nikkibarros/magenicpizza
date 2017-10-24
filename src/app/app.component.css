@@ -1,0 +1,14 @@
+.app {
+    height: 100%;
+}
+.menu {
+    float: left;
+    width: 50%;
+}
+.cart {
+    float: right;
+    width: 50%;
+}
+h1 {
+    text-align: center;
+}
